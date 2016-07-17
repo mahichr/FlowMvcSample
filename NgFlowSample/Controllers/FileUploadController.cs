@@ -29,10 +29,12 @@ namespace NgFlowSample.Controllers
             }
 
             var uploadProcessor = new FlowUploadProcessor("~/App_Data/Tmp/FileUploads");
+            //var uploadProcessor = new FlowUploadProcessorNew();
             await uploadProcessor.ProcessUploadChunkRequest(Request);
 
             if (uploadProcessor.IsComplete)
             {
+                //await uploadProcessor.WriteFile();
                 // Do post processing here:
                 // - Move the file to a permanent location
                 // - Persist information to a database

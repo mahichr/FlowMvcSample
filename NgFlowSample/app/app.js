@@ -22,6 +22,7 @@ function appConfig(flowFactoryProvider) {
 
     flowFactoryProvider.defaults = {
         target: 'api/upload',
+        testChunks:false,
         permanentErrors: [404, 500, 501],
         maxChunkRetries: 1,
         chunkRetryInterval: 5000,

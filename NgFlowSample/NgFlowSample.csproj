@@ -157,8 +157,12 @@
     </Compile>
     <Compile Include="Models\FlowMetaData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Extensions.cs" />
+    <Compile Include="Services\FileMetaDataNew.cs" />
+    <Compile Include="Services\FlowMetaDataNew.cs" />
     <Compile Include="Services\FlowMultipartFormDataStreamProvider.cs" />
     <Compile Include="Services\FlowUploadProcessor.cs" />
+    <Compile Include="Services\FlowUploadProcessorNew.cs" />
     <Compile Include="Services\InMemoryMultipartFormDataStreamProvider.cs" />
   </ItemGroup>
   <ItemGroup>
