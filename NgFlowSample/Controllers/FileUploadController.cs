@@ -28,13 +28,13 @@ namespace NgFlowSample.Controllers
                 this.Request.CreateResponse(HttpStatusCode.UnsupportedMediaType);
             }
 
-            var uploadProcessor = new FlowUploadProcessor("~/App_Data/Tmp/FileUploads");
-            //var uploadProcessor = new FlowUploadProcessorNew();
+            //var uploadProcessor = new FlowUploadProcessor("~/App_Data/Tmp/FileUploads");
+            var uploadProcessor = new FlowUploadProcessorNew();
             await uploadProcessor.ProcessUploadChunkRequest(Request);
 
             if (uploadProcessor.IsComplete)
             {
-                //await uploadProcessor.WriteFile();
+                await uploadProcessor.WriteFile();
                 // Do post processing here:
                 // - Move the file to a permanent location
                 // - Persist information to a database

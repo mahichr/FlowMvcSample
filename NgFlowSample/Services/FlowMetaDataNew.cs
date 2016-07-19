@@ -36,7 +36,9 @@ namespace NgFlowSample.Services
         /// The file's relative path when selecting a directory (defaults to file name in all browsers except Chrome).
         /// </summary>
         public string FlowRelativePath { get; set; }
-
+        /// <summary>
+        /// Total number of chunks
+        /// </summary>
         public long FlowTotalChunks { get; set; }
 
         public long FileOffset
