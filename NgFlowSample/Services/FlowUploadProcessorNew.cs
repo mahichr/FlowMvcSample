@@ -70,7 +70,6 @@ namespace NgFlowSample.Services
             lock (chunkCacheLock)
             {
                 fileMeta = GetFileMetaData(chunkMeta.FlowIdentifier);
-
                 if (fileMeta == null)
                 {
                     fileMeta = new FileMetaDataNew(chunkMeta);

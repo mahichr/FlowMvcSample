@@ -29,19 +29,20 @@ namespace NgFlowSample.Controllers
             }
 
             //var uploadProcessor = new FlowUploadProcessor("~/App_Data/Tmp/FileUploads");
-            var uploadProcessor = new FlowUploadProcessorNew();
-            await uploadProcessor.ProcessUploadChunkRequest(Request);
+            //var uploadProcessor = new FlowUploadProcessorNew();
+            var uploadProcessor = new FlowChunkProcessor();
+            var isComplete = await uploadProcessor.ProcessChunkRequest(Request);
 
-            if (uploadProcessor.IsComplete)
-            {
-                await uploadProcessor.WriteFile();
-                // Do post processing here:
-                // - Move the file to a permanent location
-                // - Persist information to a database
-                // - Raise an event to signal it was completed (if you are really feeling up to it)
-                //      - http://www.udidahan.com/2009/06/14/domain-\events-salvation/
-                //      - http://msdn.microsoft.com/en-gb/magazine/ee236415.aspx#id0400079
-            }
+            //if (uploadProcessor.IsComplete)
+            //{
+            //    await uploadProcessor.WriteFile();
+            //    // Do post processing here:
+            //    // - Move the file to a permanent location
+            //    // - Persist information to a database
+            //    // - Raise an event to signal it was completed (if you are really feeling up to it)
+            //    //      - http://www.udidahan.com/2009/06/14/domain-\events-salvation/
+            //    //      - http://msdn.microsoft.com/en-gb/magazine/ee236415.aspx#id0400079
+            //}
            
             return Ok();
         }

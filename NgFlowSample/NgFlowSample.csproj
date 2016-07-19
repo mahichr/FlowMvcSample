@@ -159,6 +159,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Extensions.cs" />
     <Compile Include="Services\FileMetaDataNew.cs" />
+    <Compile Include="Services\FlowChunk.cs" />
+    <Compile Include="Services\FlowChunkProcessor.cs" />
+    <Compile Include="Services\FlowFile.cs" />
     <Compile Include="Services\FlowMetaDataNew.cs" />
     <Compile Include="Services\FlowMultipartFormDataStreamProvider.cs" />
     <Compile Include="Services\FlowUploadProcessor.cs" />
